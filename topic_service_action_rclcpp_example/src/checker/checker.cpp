@@ -58,11 +58,10 @@ void Checker::send_goal_total_sum(float goal_sum)
     std::bind(&Checker::get_arithmetic_action_result, this, _1);
   this->arithmetic_action_client_->async_send_goal(goal_msg, send_goal_options);
 }
-
+// https://github.com/ros2/ros2_documentation/pull/2726/files/ef44007b2327f02ef19af059d9cbd510470d7291
 void Checker::get_arithmetic_action_goal(
-  std::shared_future<GoalHandleArithmeticChecker::SharedPtr> future)
+  const GoalHandleArithmeticChecker::SharedPtr & goal_handle)
 {
-  auto goal_handle = future.get();
   if (!goal_handle) {
     RCLCPP_WARN(this->get_logger(), "Action goal rejected.");
   } else {

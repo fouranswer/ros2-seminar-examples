@@ -41,7 +41,7 @@ private:
   void send_goal_total_sum(float goal_sum);
 
   void get_arithmetic_action_goal(
-    std::shared_future<rclcpp_action::ClientGoalHandle<ArithmeticChecker>::SharedPtr> future);
+    const rclcpp_action::ClientGoalHandle<ArithmeticChecker>::SharedPtr & goal_handle);
 
   void get_arithmetic_action_feedback(
     GoalHandleArithmeticChecker::SharedPtr,

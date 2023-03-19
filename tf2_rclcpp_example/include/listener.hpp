@@ -24,6 +24,7 @@
 #include "tf2/LinearMath/Transform.h"
 #include "tf2_geometry_msgs/tf2_geometry_msgs.h"
 #include "tf2_ros/transform_listener.h"
+#include "tf2_ros/buffer.h"
 
 #define RAD_TO_DEG 180 / M_PI
 #define DEG_TO_RAD M_PI / 180
