@@ -8,8 +8,7 @@ notifications:
     on_success: change
     on_failure: always
     recipients:
-      - passionvirus@gmail.com
-      - routiful@gmail.com
+      - kimchsoon@gmail.com
 branches:
   only:
     - main
